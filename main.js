@@ -1,6 +1,6 @@
-const slide0 = gsap.timeline();
+const slide1 = gsap.timeline();
 
-slide0.from(".s1-slogan1", {
+slide1.from(".s1-slogan1", {
     delay: .5,
     scale: 3,
     duration: 1.5,
@@ -9,6 +9,17 @@ slide0.from(".s1-slogan1", {
     scale: 3,
     duration: 1.5,
     opacity: 0,
+});
+
+ScrollTrigger.create({
+    animation: slide1,
+    trigger: ".slide1",
+    start: "top 0%",
+    end: "bottom 20%",
+    end: "+=5000",
+    scrub: 2,
+    markers: true,
+    pin: true,
 });
 
 const slide2 = gsap.timeline();
